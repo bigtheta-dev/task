@@ -5,12 +5,11 @@ import org.springframework.web.context.support.AnnotationConfigWebApplicationCon
 import org.springframework.web.servlet.DispatcherServlet;
 
 import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
 import javax.servlet.ServletRegistration;
 
 public class WebServletConfiguration implements WebApplicationInitializer {
 
-        public void onStartup(ServletContext ctx) throws ServletException {
+        public void onStartup(ServletContext ctx) {
             AnnotationConfigWebApplicationContext webCtx = new AnnotationConfigWebApplicationContext();
             webCtx.register(WebConfig.class);
             webCtx.setServletContext(ctx);

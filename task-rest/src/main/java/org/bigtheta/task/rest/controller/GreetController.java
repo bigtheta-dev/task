@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class GreetController {
+
     @RequestMapping(path= "/greet",method= RequestMethod.GET)
     public String greet(){
         return "greet";
