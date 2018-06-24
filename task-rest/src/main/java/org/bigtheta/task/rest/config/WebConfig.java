@@ -1,17 +1,21 @@
 package org.bigtheta.task.rest.config;
 
+import org.bigtheta.task.dao.RepoConfig;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 import org.springframework.web.servlet.ViewResolver;
-import org.springframework.web.servlet.config.annotation.*;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
 @Configuration
 @EnableWebMvc
 @ComponentScan(basePackages = "org.bigtheta.task.rest")
+@Import(RepoConfig.class)
 public class WebConfig {
+
 
     @Bean
     public ViewResolver viewResolver() {

@@ -11,10 +11,10 @@
         <a href="greet">greet!</a>
     </li>
     <li>
-        <a href="/user/1"> first user</a>
+        <a href="/task/1"> first task</a>
     </li>
     <li>
-        <a href="/user">all users</a>
+        <a href="/task">all users</a>
     </li>
 </ul>
 </body>
