@@ -11,17 +11,18 @@
 
     <modules>
         <module>task-rest</module>
-        <module>task-repo</module>
         <module>task-core</module>
     </modules>
 
     <properties>
-        <spring.version>5.0.6.RELEASE</spring.version>
+        <spring.version>5.0.7.RELEASE</spring.version>
         <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
         <maven-war-plugin.version>3.2.2</maven-war-plugin.version>
         <jdk.version>1.8</jdk.version>
         <jackson.version>2.9.5</jackson.version>
         <project.version>0.0.1</project.version>
+        <testng.version>6.14.3</testng.version>
+        <mocito.version>2.19.0</mocito.version>
     </properties>
     <build>
         <plugins>
@@ -94,6 +95,21 @@
                 <groupId>com.fasterxml.jackson.datatype</groupId>
                 <artifactId>jackson-datatype-jdk8</artifactId>
                 <version>${jackson.version}</version>
+            </dependency>
+
+            <!--test-->
+            <dependency>
+                <groupId>org.testng</groupId>
+                <artifactId>testng</artifactId>
+                <version>${testng.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-core</artifactId>
+                <version>${mocito.version}</version>
+                <scope>test</scope>
             </dependency>
 
         </dependencies>

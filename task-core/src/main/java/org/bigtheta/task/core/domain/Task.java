@@ -1,22 +1,32 @@
 package org.bigtheta.task.core.domain;
 
-import static org.bigtheta.task.core.domain.Status.active;
+import javax.persistence.*;
 
+@Entity
+@Table(name = "TASKS")
 public class Task {
 
-    private Integer id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(name = "VALUES")
     private String value;
+
+    @Column(name = "GROUPS")
     private String group;
+
+    @Column(name = "STATUS")
     private Status status;
 
     public Task() {
     }
 
-    public Task(Integer id, String value, String group) {
+    public Task(String value, String group) {
         this.id = id;
         this.value = value;
         this.group = group;
-        this.status = active;
+        this.status = Status.active;
     }
 
     public Status getStatus() {
@@ -27,11 +37,12 @@ public class Task {
         this.status = status;
     }
 
-    public Integer getId() {
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
