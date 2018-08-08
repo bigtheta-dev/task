@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Button} from 'react-bootstrap';
 
 class Task extends Component {
 
@@ -19,7 +20,7 @@ class Task extends Component {
                     <div className="taskStatus">
                         {this.props.status}
                     </div>
-                    {/*<Button className="taskButton" bsStyle="success" onClick={this.handleClick}>✖</Button>*/}
+                    <Button className="taskButton" bsStyle="success" onClick={this.handleClick}>✖</Button>
                 </div>
             </div>
         )
