@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import axios from "axios";
 import Task from "./Task";
+import './TaskList.css'
 
 class TaskList extends Component {
 
@@ -20,7 +21,7 @@ class TaskList extends Component {
 
     render() {
         return (
-            <div>
+            <div className='TaskList'>
                 <h3>task list</h3>
                 {this.state.tasks.map((task) => <Task key={task.id} {...task}/>)}
             </div>

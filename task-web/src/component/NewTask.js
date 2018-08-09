@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Button, FormControl, FormGroup} from 'react-bootstrap';
 import axios from "axios";
+import './NewTask.css';
 
 
 const url = `localhost:8080/api/task`;
@@ -41,38 +42,41 @@ class NewTask extends Component {
 
     };
 
-     render() {
-        return (<div className="Forms">
-                <form autoComplete="off">
-                    <FormGroup className="form-container" controlId="formFilter">
+    render() {
+        return (
+            <div className="NewTask">
+                <div className="Forms">
+                    <form autoComplete="off">
+                        <FormGroup className="form-container" controlId="formFilter">
 
-                        <FormControl className="form-item-input"
-                                     inputRef={ref => {
-                                         this.state.filter = ref;
-                                     }}
-                                     type="text"
-                                     placeholder="filter"
-                                     onChange={this.handleFilter}
-                        />
+                            <FormControl className="form-item-input"
+                                         inputRef={ref => {
+                                             this.state.filter = ref;
+                                         }}
+                                         type="text"
+                                         placeholder="filter"
+                                         onChange={this.handleFilter}
+                            />
 
-                    </FormGroup>
+                        </FormGroup>
 
-                </form>
-                <form autoComplete="off" onSubmit={this.handleCreate}>
+                    </form>
+                    <form autoComplete="off" onSubmit={this.handleCreate}>
 
 
-                    <FormGroup className="form-container" controlId="formCreate">
-                        <FormControl className="form-item-input"
-                                     value={this.state.task}
-                                     onChange={(event) => this.setState({task: event.target.value})}
-                                     type="text"
-                                     placeholder="new value"
-                        />
-                        <Button className="form-item-button" bsStyle="primary" type="submit">✚</Button>
-                    </FormGroup>
+                        <FormGroup className="form-container" controlId="formCreate">
+                            <FormControl className="form-item-input"
+                                         value={this.state.task}
+                                         onChange={(event) => this.setState({task: event.target.value})}
+                                         type="text"
+                                         placeholder="new value"
+                            />
+                            <Button className="form-item-button" bsStyle="primary" type="submit">✚</Button>
+                        </FormGroup>
 
-                </form>
+                    </form>
 
+                </div>
             </div>
         );
 

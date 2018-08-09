@@ -1,0 +1,15 @@
+.Task {
+    background: ghostwhite;
+    margin:3px;
+    border: 1px solid lightgray;
+}
+
+.Task div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.Task div div {
+    margin:5px;
+}
