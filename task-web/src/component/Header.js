@@ -8,7 +8,7 @@ class Header extends Component {
 
     render() {
         return (
-            <div>
+            <div className="Header">
                 <header className="App-header">
                     <h1 className="App-title">Tasks App</h1>
                 </header>
